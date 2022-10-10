@@ -19,3 +19,9 @@ $router->get('/', function () use ($router) {
 
 $router->post('/register', 'UserController@register');
 $router->post('/login', 'UserController@login');
+
+$router->post('/employee', 'EmployeeController@create');
+$router->get('/employee', 'EmployeeController@index');
+$router->get('/employee/{id}', 'EmployeeController@index');
+$router->put('/employee/{id}', 'EmployeeController@update');
+$router->delete('/employee/{id}', 'EmployeeController@destroy');
